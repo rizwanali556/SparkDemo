@@ -11,10 +11,10 @@ else
     exit 1
 fi
 
-#To create Git version folder inside s3 bucket
-
-aws s3api put-object --bucket $BucketName --key $keyname
-
 #To copy Artifacts from source GITHub to S3 with selected Repositories from Git to s3
 
-aws s3 cp $Applicationpath s3://$BucketName/$keyname --recursive $exclude_variables $region
+#aws s3 cp $Applicationpath s3://$BucketName/$keyname --recursive $exclude_variables $region
+
+#To copy Artifacts from source GITHub to S3 with selected Repositories from Git to s3 inclding only jar file
+
+aws s3 cp $Applicationpath s3://$BucketName/$keyname --recursive --exclude "*" $include_variables $region
