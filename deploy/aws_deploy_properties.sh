@@ -18,5 +18,8 @@ export keyname=""$ApplicationName"_"$BuildName"/"
 # Region name for deploying in to s3 Artifact
 export region="--region ap-south-1"
 
+# Export Artifacts for including artifacts/folders from Github Repo
+include_variables="--include=*.jar"
+
 # Export Artifacts for excluding artifacts/folders from Github Repo
-export exclude_variables="--exclude=project/* --exclude=.idea/* --exclude=.git/* --exclude=deploy/*"
+#export exclude_variables="--exclude=project/* --exclude=.idea/* --exclude=.git/* --exclude=deploy/*"
